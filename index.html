@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beginner Quiz Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Beginner Quiz Website</h1>
+    <nav>
+      <button id="homeBtn">Home</button>
+      <!-- Link to the admin panel -->
+      <a href="admin.html"><button id="adminLink">Admin Panel</button></a>
+    </nav>
+  </header>
+
+  <!-- Home / Section Selection -->
+  <main id="homePage">
+    <h2>Select a Quiz Section</h2>
+    <div class="quiz-options">
+      <button class="quizSelect" data-section="html">HTML</button>
+      <button class="quizSelect" data-section="css">CSS</button>
+      <button class="quizSelect" data-section="javascript">JavaScript</button>
+    </div>
+  </main>
+
+  <!-- Quiz Page -->
+  <main id="quizPage" class="hidden">
+    <div id="quizContainer">
+      <div id="questionContainer">
+        <p id="questionText"></p>
+        <div id="optionsContainer"></div>
+      </div>
+      <button id="nextButton" disabled>Next</button>
+    </div>
+  </main>
+
+  <!-- Results Page -->
+  <main id="resultPage" class="hidden">
+    <h2>Your Results</h2>
+    <p id="scoreText"></p>
+    <!-- Reward Section: Only shows if score >= 80% -->
+    <div id="rewardSection" class="hidden">
+      <h3>Congratulations! You are eligible for a reward.</h3>
+      <form id="rewardForm">
+        <label for="whatsapp">WhatsApp Number:</label>
+        <input type="text" id="whatsapp" required />
+        <br />
+        <label for="bankAccount">Bank Account Number:</label>
+        <input type="text" id="bankAccount" required />
+        <br />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <button id="restartButton">Restart Quiz</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

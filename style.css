@@ -1,0 +1,259 @@
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+
+/* Header Styling */
+header {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: #fff;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8em;
+}
+
+/* Navigation Buttons */
+nav button,
+nav a button {
+  background: #fff;
+  border: none;
+  color: #2575fc;
+  padding: 0.5em 1em;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+nav button:hover,
+nav a button:hover {
+  background: #e6e6e6;
+}
+
+/* Main Container */
+main {
+  padding: 2em;
+  max-width: 900px;
+  margin: 2em auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Utility Classes */
+.hidden {
+  display: none;
+}
+
+/* Quiz Options Layout */
+.quiz-options {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.quiz-options button {
+  background: #2575fc;
+  color: #fff;
+  border: none;
+  padding: 1em 2em;
+  margin: 1em;
+  border-radius: 10px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.quiz-options button:hover {
+  background: #6a11cb;
+}
+
+/* Quiz Container */
+#quizContainer {
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Question Text */
+#questionText {
+  font-size: 1.3em;
+  margin-bottom: 1em;
+}
+
+/* Options Styling */
+#optionsContainer button {
+  display: block;
+  width: 100%;
+  background: #f0f0f0;
+  border: none;
+  padding: 1em;
+  margin: 0.5em 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#optionsContainer button:hover {
+  background: #dcdcdc;
+}
+
+#optionsContainer button.selected {
+  background: #2575fc;
+  color: #fff;
+}
+
+/* Next & Restart Buttons */
+#nextButton, #restartButton {
+  background: #2575fc;
+  color: #fff;
+  border: none;
+  padding: 0.8em 1.5em;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 1em;
+  display: block;
+  width: 100%;
+  transition: background 0.3s;
+}
+
+#nextButton:disabled {
+  background: #a6c8ff;
+  cursor: not-allowed;
+}
+
+/* Reward Form */
+#rewardForm input {
+  width: calc(100% - 2em);
+  padding: 0.8em;
+  margin: 0.5em 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#rewardForm button {
+  background: #2575fc;
+  color: #fff;
+  border: none;
+  padding: 0.8em;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1em;
+  transition: background 0.3s;
+}
+
+#rewardForm button:hover {
+  background: #6a11cb;
+}
+
+
+
+/* ---------- Admin Panel Styles ---------- */
+
+/* Main container for admin sections */
+main {
+  padding: 2em;
+  max-width: 900px;
+  margin: 2em auto;
+}
+
+/* Container for each admin section */
+#questionManagement,
+#addQuestionSection {
+  background: #fff;
+  padding: 2em;
+  margin: 1em 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Section Titles */
+#questionManagement h2,
+#addQuestionSection h2 {
+  color: #2575fc;
+  margin-bottom: 1em;
+  font-size: 1.5em;
+}
+
+/* Form & Select/Input Styling */
+#questionManagement select,
+#addQuestionSection select,
+#addQuestionSection input {
+  width: 100%;
+  padding: 0.8em;
+  margin: 0.5em 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+/* Labels */
+#questionManagement label,
+#addQuestionSection label {
+  font-weight: bold;
+  margin-top: 0.5em;
+  display: block;
+}
+
+/* Add Question Form Button */
+#addQuestionForm button {
+  background: #2575fc;
+  color: #fff;
+  border: none;
+  padding: 0.8em;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1em;
+  font-size: 1em;
+  transition: background 0.3s;
+}
+
+#addQuestionForm button:hover {
+  background: #6a11cb;
+}
+
+/* Styling for the question list items */
+#questionList .question-item {
+  background: #f0f0f0;
+  padding: 1em;
+  margin-bottom: 0.5em;
+  border-radius: 5px;
+  position: relative;
+}
+
+#questionList .question-item strong {
+  color: #2575fc;
+}
+
+/* Delete Button inside Question List */
+#questionList .question-item button {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background 0.3s;
+}
+
+#questionList .question-item button:hover {
+  background: #c0392b;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel - Quiz Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Admin Panel</h1>
+    <nav>
+      <a href="index.html"><button id="backToHome">Back to Home</button></a>
+    </nav>
+  </header>
+  <main>
+    <section id="questionManagement">
+      <h2>Manage Questions</h2>
+      <div>
+        <label for="sectionSelect">Select Section:</label>
+        <select id="sectionSelect">
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="javascript">JavaScript</option>
+        </select>
+      </div>
+      <div id="questionList"></div>
+    </section>
+
+    <section id="addQuestionSection">
+      <h2>Add New Question</h2>
+      <form id="addQuestionForm">
+        <div>
+          <label for="questionSection">Section:</label>
+          <select id="questionSection" required>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+          </select>
+        </div>
+        <div>
+          <label for="questionTextInput">Question:</label>
+          <input type="text" id="questionTextInput" required />
+        </div>
+        <div>
+          <label>Options (comma separated):</label>
+          <input type="text" id="optionsInput" placeholder="Option1,Option2,Option3,Option4" required />
+        </div>
+        <div>
+          <label for="correctAnswerInput">Correct Answer:</label>
+          <input type="text" id="correctAnswerInput" required />
+        </div>
+        <button type="submit">Add Question</button>
+      </form>
+    </section>
+  </main>
+  <script src="admin.js"></script>
+</body>
+</html>
